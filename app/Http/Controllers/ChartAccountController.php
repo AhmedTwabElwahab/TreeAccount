@@ -28,7 +28,7 @@ class ChartAccountController extends Controller
         {
             if ($account->parent_id == $parentId)
             {
-                $children = $this->buildTree($accounts, $account->id);
+                $children = $this->getAllChildren($accounts, $account->id);
 
                 $tree[] = [
                     'id' => $account->id,
